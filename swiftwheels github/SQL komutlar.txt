@@ -1,0 +1,655 @@
+/// TABLES
+
+CREATE TABLE IF NOT EXISTS public.car_details
+(
+    vehicle_id integer NOT NULL,
+    seri character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    fuel character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT car_details_pkey PRIMARY KEY (vehicle_id),
+    CONSTRAINT car_details_vehicle_id_fkey FOREIGN KEY (vehicle_id)
+        REFERENCES public.vehicles (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+CREATE TABLE IF NOT EXISTS public.jeep_details
+(
+    vehicle_id integer NOT NULL,
+    seri character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    fuel character varying(15) COLLATE pg_catalog."default" NOT NULL,
+    traction character varying(10) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT jeep_details_pkey PRIMARY KEY (vehicle_id),
+    CONSTRAINT jeep_details_vehicle_id_fkey FOREIGN KEY (vehicle_id)
+        REFERENCES public.vehicles (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+CREATE TABLE IF NOT EXISTS public.kullanici
+(
+    id integer NOT NULL DEFAULT nextval('kullanici_id_seq'::regclass),
+    fname character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    lname character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    phone character varying(11) COLLATE pg_catalog."default" NOT NULL,
+    mail character varying(40) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT kullanici_pkey PRIMARY KEY (id),
+    CONSTRAINT kullanici_mail_key UNIQUE (mail)
+)
+
+CREATE TABLE IF NOT EXISTS public.motor_details
+(
+    vehicle_id integer NOT NULL,
+    type character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    cooling character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    cylinder character varying(5) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT motor_details_pkey PRIMARY KEY (vehicle_id),
+    CONSTRAINT motor_details_vehicle_id_fkey FOREIGN KEY (vehicle_id)
+        REFERENCES public.vehicles (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+CREATE TABLE IF NOT EXISTS public.rented_vehicles
+(
+    id integer NOT NULL DEFAULT nextval('rented_vehicles_id_seq'::regclass),
+    user_id integer NOT NULL,
+    address character varying COLLATE pg_catalog."default" NOT NULL,
+    purchase_date date NOT NULL,
+    return_date date NOT NULL,
+    vehicle_id integer NOT NULL,
+    fee integer NOT NULL,
+    CONSTRAINT rented_vehicles_pkey PRIMARY KEY (id),
+    CONSTRAINT rented_vehicles_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public.kullanici (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT rented_vehicles_vehicle_id_fkey FOREIGN KEY (vehicle_id)
+        REFERENCES public.vehicles (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+
+CREATE TABLE IF NOT EXISTS public.user_logs
+(
+    id integer NOT NULL DEFAULT nextval('user_logs_id_seq'::regclass),
+    user_id integer NOT NULL,
+    login_time timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    user_action character varying COLLATE pg_catalog."default",
+    CONSTRAINT user_logs_pkey PRIMARY KEY (id),
+    CONSTRAINT user_logs_user_id_fkey FOREIGN KEY (user_id)
+        REFERENCES public.kullanici (id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE CASCADE
+)
+
+CREATE TABLE IF NOT EXISTS public.vehicles
+(
+    id integer NOT NULL DEFAULT nextval('vehicles_id_seq'::regclass),
+    make character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    model character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    year integer NOT NULL,
+    km integer NOT NULL,
+    color character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    engine_power character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    engine_capacity character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    price integer NOT NULL,
+    stock integer NOT NULL DEFAULT 5,
+    CONSTRAINT vehicles_pkey PRIMARY KEY (id)
+)
+
+
+/// FUNCTIONS
+
+CREATE OR REPLACE FUNCTION public.account_read(
+	user_id integer)
+    RETURNS TABLE(fname character varying, lname character varying, phone character varying, mail character varying, password character varying) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        k.fname, 
+        k.lname, 
+        k.phone, 
+        k.mail, 
+        k.password
+    FROM public.kullanici k
+    WHERE k.id = user_id;
+END;
+$$;
+
+CREATE OR REPLACE FUNCTION public.get_all_rented_vehicles(
+	)
+    RETURNS TABLE(user_id integer, address character varying, purchase_date date, return_date date, vehicle_id integer, fee integer) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        rv.user_id,
+        rv.address,
+        rv.purchase_date,
+        rv.return_date,
+        rv.vehicle_id,
+        rv.fee
+    FROM rented_vehicles rv;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE FUNCTION public.get_rented_vehicles_by_user(
+	p_user_id integer)
+    RETURNS TABLE(vehicle_id integer, make character varying, model character varying, fee integer, purchase_date date, return_date date) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    RETURN QUERY
+    SELECT 
+        v.id AS vehicle_id,
+        v.make,
+        v.model,
+        rv.fee,
+        rv.purchase_date,
+        rv.return_date
+    FROM rented_vehicles rv
+    JOIN vehicles v ON rv.vehicle_id = v.id
+    WHERE rv.user_id = p_user_id;
+END;
+$BODY$;
+
+CREATE OR REPLACE FUNCTION public.get_vehicle_details_by_type(
+	p_vehicle_id integer,
+	p_vehicle_type text)
+    RETURNS TABLE(id integer, make character varying, model character varying, year integer, km integer, color character varying, engine_power character varying, engine_capacity character varying, price integer, stock integer, detail1 character varying, detail2 character varying, detail3 character varying) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    
+    IF p_vehicle_type = 'car' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock,
+            cd.seri AS detail1, cd.fuel AS detail2, NULL::VARCHAR AS detail3
+        FROM vehicles v
+        INNER JOIN car_details cd ON v.id = cd.vehicle_id
+        WHERE v.id = p_vehicle_id;
+
+   
+    ELSIF p_vehicle_type = 'jeep' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock,
+            jd.seri AS detail1, jd.fuel AS detail2, jd.traction AS detail3
+        FROM vehicles v
+        INNER JOIN jeep_details jd ON v.id = jd.vehicle_id
+        WHERE v.id = p_vehicle_id;
+
+   
+    ELSIF p_vehicle_type = 'motor' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock,
+            md.type AS detail1, md.cooling AS detail2, md.cylinder AS detail3
+        FROM vehicles v
+        INNER JOIN motor_details md ON v.id = md.vehicle_id
+        WHERE v.id = p_vehicle_id;
+
+    
+    ELSE
+        RAISE EXCEPTION 'Geçersiz araç türü: %', p_vehicle_type;
+    END IF;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE FUNCTION public.get_vehicles(
+	p_vehicle_type text)
+    RETURNS TABLE(id integer, make character varying, model character varying, year integer, km integer, color character varying, engine_power character varying, engine_capacity character varying, price integer, stock integer, detail1 character varying, detail2 character varying, detail3 character varying) 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+BEGIN
+    -- Eğer araç türü "car" ise
+    IF p_vehicle_type = 'car' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock, 
+            cd.seri AS detail1, 
+            cd.fuel AS detail2, 
+            NULL::VARCHAR AS detail3
+        FROM vehicles v
+        INNER JOIN car_details cd ON v.id = cd.vehicle_id
+        ORDER BY v.id;
+
+    -- Eğer araç türü "jeep" ise
+    ELSIF p_vehicle_type = 'jeep' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock, 
+            jd.seri AS detail1, 
+            jd.fuel AS detail2, 
+            jd.traction AS detail3
+        FROM vehicles v
+        INNER JOIN jeep_details jd ON v.id = jd.vehicle_id
+        ORDER BY v.id;
+
+    -- Eğer araç türü "motor" ise
+    ELSIF p_vehicle_type = 'motor' THEN
+        RETURN QUERY
+        SELECT 
+            v.id, v.make, v.model, v.year, v.km, v.color, 
+            v.engine_power, v.engine_capacity, v.price, v.stock, 
+            md.type AS detail1, 
+            md.cooling AS detail2, 
+            md.cylinder AS detail3
+        FROM vehicles v
+        INNER JOIN motor_details md ON v.id = md.vehicle_id
+        ORDER BY v.id;
+
+    -- Geçersiz araç türü verilirse hata döndür
+    ELSE
+        RAISE EXCEPTION 'Geçersiz araç türü: %', p_vehicle_type;
+    END IF;
+END;
+$BODY$;
+
+///END FUNCTIONS
+
+// PROCEDURES
+
+CREATE OR REPLACE PROCEDURE public.account_delete(
+	IN p_user_id integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN 
+    IF EXISTS (SELECT 1 FROM public.rented_vehicles WHERE user_id = p_user_id) THEN
+        RAISE EXCEPTION 'Kiralanmış aracınız var, hesabınızı silemezsiniz';
+    ELSE
+        DELETE FROM public.kullanici WHERE id = p_user_id;
+    END IF;
+END;
+$BODY$;
+
+CREATE OR REPLACE PROCEDURE public.account_iu(
+	IN name character varying,
+	IN surname character varying,
+	IN phonenumber character varying,
+	IN email character varying,
+	IN sifre character varying,
+	IN procedure_op character varying)
+LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN 
+	IF (procedure_op = 'INSERT') THEN
+		INSERT INTO public.kullanici (fname, lname, phone, mail, password) 
+		VALUES (name, surname, phonenumber, email, sifre);
+	ELSIF (procedure_op = 'UPDATE') THEN
+		UPDATE public.kullanici 
+		SET fname = name, lname = surname, phone = phonenumber, password = sifre 
+		WHERE mail = email;
+	END IF;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE PROCEDURE public.add_update_vehicle(
+	IN p_type character varying,
+	IN p_vehicle_id integer,
+	IN p_make character varying,
+	IN p_model character varying,
+	IN p_year integer,
+	IN p_km integer,
+	IN p_color character varying,
+	IN p_engine_power character varying,
+	IN p_engine_capacity character varying,
+	IN p_price integer,
+	IN p_stock integer,
+	IN p_seri character varying,
+	IN p_fuel character varying,
+	IN p_traction character varying,
+	IN p_motor_type character varying,
+	IN p_cooling character varying,
+	IN p_cylinder character varying)
+LANGUAGE 'plpgsql'
+AS $BODY$
+DECLARE
+    new_vehicle_id INT;
+BEGIN
+    -- Eğer p_vehicle_id NULL ise yeni bir kayıt ekle
+    IF p_vehicle_id IS NULL THEN
+        -- Mevcut en yüksek ID'yi al
+        SELECT COALESCE(MAX(id), 0) + 1 INTO new_vehicle_id FROM public.vehicles;
+
+        -- Vehicles tablosuna yeni kayıt ekle
+        INSERT INTO public.vehicles(
+            id, make, model, year, km, color, engine_power, engine_capacity, price, stock)
+        VALUES (new_vehicle_id, p_make, p_model, p_year, p_km, p_color, p_engine_power, p_engine_capacity, p_price, p_stock);
+
+        -- Araç türüne göre ilgili tabloya kayıt ekle
+        IF p_type = 'car' THEN
+            INSERT INTO public.car_details(vehicle_id, seri, fuel)
+            VALUES (new_vehicle_id, p_seri, p_fuel);
+
+        ELSIF p_type = 'motor' THEN
+            INSERT INTO public.motor_details(vehicle_id, type, cooling, cylinder)
+            VALUES (new_vehicle_id, p_motor_type, p_cooling, p_cylinder);
+
+        ELSIF p_type = 'jeep' THEN
+            INSERT INTO public.jeep_details(vehicle_id, seri, fuel, traction)
+            VALUES (new_vehicle_id, p_seri, p_fuel, p_traction);
+
+        ELSE
+            RAISE EXCEPTION 'Invalid vehicle type: %', p_type;
+        END IF;
+
+    -- Eğer p_vehicle_id NULL değilse var olan kaydı güncelle
+    ELSE
+        -- Vehicles tablosunu güncelle
+        UPDATE public.vehicles
+        SET make = p_make, model = p_model, year = p_year, km = p_km, color = p_color, 
+            engine_power = p_engine_power, engine_capacity = p_engine_capacity, 
+            price = p_price, stock = p_stock
+        WHERE id = p_vehicle_id;
+
+        -- Araç türüne göre ilgili tabloyu güncelle
+        IF p_type = 'car' THEN
+            UPDATE public.car_details
+            SET seri = p_seri, fuel = p_fuel
+            WHERE vehicle_id = p_vehicle_id;
+
+        ELSIF p_type = 'motor' THEN
+            UPDATE public.motor_details
+            SET type = p_motor_type, cooling = p_cooling, cylinder = p_cylinder
+            WHERE vehicle_id = p_vehicle_id;
+
+        ELSIF p_type = 'jeep' THEN
+            UPDATE public.jeep_details
+            SET seri = p_seri, fuel = p_fuel, traction = p_traction
+            WHERE vehicle_id = p_vehicle_id;
+
+        ELSE
+            RAISE EXCEPTION 'Invalid vehicle type: %', p_type;
+        END IF;
+    END IF;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE PROCEDURE public.delete_vehicle(
+	IN p_type character varying,
+	IN p_vehicle_id integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+
+	IF EXISTS (
+        SELECT 1
+        FROM rented_vehicles
+        WHERE vehicle_id = p_vehicle_id
+    ) THEN
+        RAISE EXCEPTION 'Seçtiğiniz araç kiralı durumda, silme işlemi yapılamaz.';
+    END IF;
+    -- Önce araç türüne göre ilişkili tabloyu sil
+    IF p_type = 'car' THEN
+        DELETE FROM public.car_details
+        WHERE vehicle_id = p_vehicle_id;
+
+    ELSIF p_type = 'motor' THEN
+        DELETE FROM public.motor_details
+        WHERE vehicle_id = p_vehicle_id;
+
+    ELSIF p_type = 'jeep' THEN
+        DELETE FROM public.jeep_details
+        WHERE vehicle_id = p_vehicle_id;
+
+    ELSE
+        RAISE EXCEPTION 'Invalid vehicle type: %', p_type;
+    END IF;
+
+     
+
+END;
+$BODY$;
+
+
+
+CREATE OR REPLACE PROCEDURE public.return_vehicle(
+	IN p_user_id integer,
+	IN p_vehicle_id integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+BEGIN
+    -- Kullanıcı ve araç için bir kiralama kaydı olup olmadığını kontrol et
+    IF EXISTS (
+        SELECT 1
+        FROM rented_vehicles
+        WHERE user_id = p_user_id AND vehicle_id = p_vehicle_id
+    ) THEN
+        -- Kiralama kaydını sil
+        DELETE FROM rented_vehicles
+        WHERE user_id = p_user_id AND vehicle_id = p_vehicle_id;
+
+        RAISE NOTICE 'Araç başarıyla iade edildi.';
+    ELSE
+        -- Kayıt bulunamadıysa hata fırlat
+        RAISE EXCEPTION 'Bu kullanıcı için iade edilecek bir araç kaydı bulunamadı.';
+    END IF;
+END;
+$BODY$;
+
+
+
+CREATE OR REPLACE PROCEDURE public.vehicle_rent(
+	IN p_user_id integer,
+	IN p_address character varying,
+	IN p_vehicle_id integer,
+	IN p_days_between integer,
+	IN p_fee integer)
+LANGUAGE 'plpgsql'
+AS $BODY$
+DECLARE
+    v_current_stock INT;        -- Aracın mevcut stoğu
+    v_purchase_date DATE := CURRENT_DATE;  -- Kiralama tarihi
+    v_return_date DATE;         -- İade tarihi
+BEGIN
+    -- Kullanıcının var olup olmadığını kontrol et
+    IF NOT EXISTS (
+        SELECT 1
+        FROM public.kullanici
+        WHERE id = p_user_id
+    ) THEN
+        RAISE EXCEPTION 'Kullanıcı bulunamadı: %', p_user_id;
+    END IF;
+
+    -- Aracın mevcut stoğunu kontrol et
+    SELECT stock INTO v_current_stock
+    FROM public.vehicles
+    WHERE id = p_vehicle_id;
+
+    -- Eğer stok 0 ise hata döndür
+    IF v_current_stock IS NULL OR v_current_stock <= 0 THEN
+        RAISE EXCEPTION 'Araç stoğu tükenmiş veya geçersiz araç ID: %', p_vehicle_id;
+    END IF;
+
+    -- İade tarihini hesapla
+    v_return_date := v_purchase_date + p_days_between;
+
+    -- Kiralama bilgilerini rented_vehicles tablosuna ekle
+    INSERT INTO public.rented_vehicles (user_id, address, purchase_date, return_date, vehicle_id, fee)
+    VALUES (p_user_id, p_address, v_purchase_date, v_return_date, p_vehicle_id, p_fee);
+
+END;
+$BODY$;
+
+/// END PROCEDURES
+
+/// TRIGGER FUNCTIONS
+
+CREATE OR REPLACE FUNCTION public.decrease_vehicle_stock()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+BEGIN
+    
+    UPDATE vehicles
+    SET stock = stock - 1
+    WHERE id = NEW.vehicle_id;
+
+    
+    IF (SELECT stock FROM vehicles WHERE id = NEW.vehicle_id) < 0 THEN
+        RAISE EXCEPTION 'Aracın stoğu tükenmiştir';
+    END IF;
+
+    RETURN NEW;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE TRIGGER trg_decrease_stock
+    AFTER INSERT
+    ON public.rented_vehicles
+    FOR EACH ROW
+    EXECUTE FUNCTION public.decrease_vehicle_stock();
+
+
+
+CREATE OR REPLACE FUNCTION public.delete_vehicle_on_detail_delete()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+BEGIN
+    
+    DELETE FROM vehicles WHERE id = OLD.vehicle_id;
+
+    
+    RETURN OLD;
+END;
+$BODY$;
+
+CREATE OR REPLACE TRIGGER delete_vehicle_on_car_detail_delete
+    AFTER DELETE
+    ON public.car_details
+    FOR EACH ROW
+    EXECUTE FUNCTION public.delete_vehicle_on_detail_delete();
+
+CREATE OR REPLACE TRIGGER delete_vehicle_on_jeep_detail_delete
+    AFTER DELETE
+    ON public.jeep_details
+    FOR EACH ROW
+    EXECUTE FUNCTION public.delete_vehicle_on_detail_delete();
+
+CREATE OR REPLACE TRIGGER delete_vehicle_on_motor_detail_delete
+    AFTER DELETE
+    ON public.motor_details
+    FOR EACH ROW
+    EXECUTE FUNCTION public.delete_vehicle_on_detail_delete();
+
+
+CREATE OR REPLACE FUNCTION public.increase_vehicle_stock()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+BEGIN
+
+    UPDATE vehicles
+    SET stock = stock + 1
+    WHERE id = OLD.vehicle_id;
+
+    RETURN OLD;
+END;
+$BODY$;
+
+
+CREATE OR REPLACE TRIGGER after_vehicle_return
+    AFTER DELETE
+    ON public.rented_vehicles
+    FOR EACH ROW
+    EXECUTE FUNCTION public.increase_vehicle_stock();
+
+CREATE OR REPLACE FUNCTION public.user_logs_trigger_function()
+    RETURNS trigger
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE NOT LEAKPROOF
+AS $BODY$
+BEGIN
+    -- INSERT işlemi için log
+    IF (TG_OP = 'INSERT') THEN
+        INSERT INTO user_logs (user_id, login_time, user_action) 
+        VALUES (NEW.id, CURRENT_TIMESTAMP, 'INSERT');
+
+    -- UPDATE işlemi için log
+    ELSIF (TG_OP = 'UPDATE') THEN
+        INSERT INTO user_logs (user_id, login_time, user_action) 
+        VALUES (NEW.id, CURRENT_TIMESTAMP, 'UPDATE');
+
+    -- DELETE işlemi için log
+    ELSIF (TG_OP = 'DELETE') THEN
+        INSERT INTO user_logs (user_id, login_time, user_action) 
+        VALUES (OLD.id, CURRENT_TIMESTAMP, 'DELETE');
+    END IF;
+
+    RETURN NULL; -- AFTER trigger için kullanılmaz
+END;
+$BODY$;
+
+CREATE OR REPLACE TRIGGER log_user_insert
+    AFTER INSERT
+    ON public.kullanici
+    FOR EACH ROW
+    EXECUTE FUNCTION public.user_logs_trigger_function();
+
+CREATE OR REPLACE TRIGGER log_user_update
+    AFTER UPDATE 
+    ON public.kullanici
+    FOR EACH ROW
+    EXECUTE FUNCTION public.user_logs_trigger_function();
+
+
+/// END TRIGGER FUNCTIONS
+
+/// VIEW
+
+CREATE OR REPLACE VIEW public.admin
+ AS
+ SELECT ( SELECT count(*) AS count
+           FROM vehicles) AS vehicle_type_number,
+    ( SELECT count(*) AS count
+           FROM kullanici) AS user_number,
+    ( SELECT count(*) AS count
+           FROM rented_vehicles) AS rented_vehicle_number,
+    ( SELECT COALESCE(sum(rented_vehicles.fee), 0::bigint) AS "coalesce"
+           FROM rented_vehicles) AS total_turnover,
+    ( SELECT COALESCE(sum(vehicles.stock), 0::bigint) AS "coalesce"
+           FROM vehicles) AS vehicle_stock;

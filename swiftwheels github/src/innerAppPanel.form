@@ -1,0 +1,2417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="innerAppPanel">
+  <grid id="27dc6" binding="mainPanel1" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="6" y="-20" width="1183" height="1724"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="true"/>
+      <background color="-3024164"/>
+      <doubleBuffered value="true"/>
+      <enabled value="true"/>
+      <focusCycleRoot value="true"/>
+      <focusTraversalPolicyProvider value="true"/>
+      <maximumSize width="100000" height="1000"/>
+      <preferredSize width="1300" height="1000"/>
+      <visible value="true"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="ef5e6" binding="InnerLogoPanel" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="400" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-2690825"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="45530" class="javax.swing.JLabel" binding="LogoLabel" custom-create="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="ae3e6" class="javax.swing.JLabel" binding="car1Logo" custom-create="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <foreground color="-16777216"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="95ab" class="javax.swing.JLabel" binding="car2Logo" custom-create="true">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="10b7f" class="javax.swing.JLabel" binding="motorLogo" custom-create="true">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <hspacer id="967ab">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="451" height="11"/>
+              </grid>
+            </constraints>
+          </hspacer>
+        </children>
+      </grid>
+      <grid id="e46e9" binding="MenuPanel" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6381149"/>
+          <enabled value="false"/>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="cafc5" class="javax.swing.JButton" binding="accountButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <enabled value="true"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Account"/>
+            </properties>
+          </component>
+          <component id="75e94" class="javax.swing.JButton" binding="contractButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Contract"/>
+            </properties>
+          </component>
+          <component id="12db2" class="javax.swing.JButton" binding="vehicleButton" default-binding="true">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Vehicle"/>
+            </properties>
+          </component>
+          <component id="33da8" class="javax.swing.JButton" binding="homeButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Home"/>
+            </properties>
+          </component>
+          <component id="7f6ba" class="javax.swing.JButton" binding="adminPanelButton">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Admin"/>
+              <visible value="false"/>
+            </properties>
+          </component>
+          <component id="9b808" class="javax.swing.JButton" binding="logOutButton" default-binding="true">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-11758696"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Log out"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c4d02" binding="parentPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="dec1" binding="homePanel" layout-manager="GridLayoutManager" row-count="9" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <background color="-2690825"/>
+              <maximumSize width="1000" height="800"/>
+              <visible value="false"/>
+            </properties>
+            <border type="bevel-lowered" title-position="2"/>
+            <children>
+              <component id="51b64" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="28"/>
+                  <foreground color="-16777216"/>
+                  <text value="Kalitenin tek adresi"/>
+                </properties>
+              </component>
+              <component id="5833b" class="javax.swing.JLabel" binding="homeLogo" custom-create="true">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="3232d" class="javax.swing.JLabel" binding="mailLogo" custom-create="true">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="12"/>
+                  <foreground color="-16777216"/>
+                  <text value="   E - MAİL : SwiftWheels@gazi.edu.tr"/>
+                </properties>
+              </component>
+              <component id="88ba2" class="javax.swing.JLabel" binding="phoneLogo" custom-create="true">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="12"/>
+                  <foreground color="-16777216"/>
+                  <text value="   PHONE :  0543 745 74 78 ----  0531 836 16 27"/>
+                </properties>
+              </component>
+              <component id="e6707" class="javax.swing.JLabel" binding="locationLogo" custom-create="true">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="12"/>
+                  <foreground color="-16777216"/>
+                  <text value="   LOCATİON : Emniyet, Milas Sk. No:30, 06560 Yenimahalle/Ankara"/>
+                </properties>
+              </component>
+              <component id="d480b" class="javax.swing.JLabel" binding="instaLogo" custom-create="true">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="12"/>
+                  <foreground color="-16777216"/>
+                  <text value="   INSTAGRAM : umutsn_    diyaralma361  "/>
+                </properties>
+              </component>
+              <component id="52868" class="javax.swing.JTextArea" default-binding="true">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <minimum-size width="100" height="100"/>
+                    <preferred-size width="100" height="220"/>
+                    <maximum-size width="1000" height="300"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-2690825"/>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <tabSize value="6"/>
+                  <text value="  Swiftwheels was founded in 2023 by Mehmet Durucu , Diyar Alma and Umut Tosun.&#10;Operating in the rental car market, Swiftwheels is the most affordable car rental&#10;company in the market.&#10;Swiftwheels is very sensitive about customer satisfaction and provides&#10;high-level services to its customers regarding their car rentals and any &#10;problems that may arise thereafter.Swiftwheels improves itself day by day with &#10;your suggestions and offersquality service to its customers. You can be sure that&#10;Swiftwheels is the company where you can rent a car at the most affordable price.&#10;"/>
+                </properties>
+              </component>
+              <component id="6fa1d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="12"/>
+                  <foreground color="-16777216"/>
+                  <text value="© 2008-2023 Tüm Hakları Saklıdır. Swiftwheels.com"/>
+                </properties>
+              </component>
+              <vspacer id="8496f">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="11" height="1172"/>
+                  </grid>
+                </constraints>
+              </vspacer>
+            </children>
+          </grid>
+          <grid id="41675" binding="vehiclesMenuPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card4"/>
+            </constraints>
+            <properties>
+              <background color="-2690825"/>
+            </properties>
+            <border type="bevel-lowered"/>
+            <children>
+              <scrollpane id="f7c40" binding="scrollPane">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <horizontalScrollBarPolicy value="30"/>
+                  <preferredSize width="421" height="2000"/>
+                  <verticalScrollBarPolicy value="22"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="981d7" binding="vehicleParentPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <grid id="2472d" binding="carPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card6"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                          <foreground color="-16777216"/>
+                          <minimumSize width="411" height="2000"/>
+                        </properties>
+                        <border type="line"/>
+                        <children/>
+                      </grid>
+                      <grid id="efdb0" binding="suvPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card1"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="line"/>
+                        <children/>
+                      </grid>
+                      <grid id="55e84" binding="motorcyclePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card3"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children/>
+                      </grid>
+                      <grid id="67c82" binding="carInfoPanel" layout-manager="GridLayoutManager" row-count="12" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card4"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="43500" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-16777216"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Make:"/>
+                            </properties>
+                          </component>
+                          <component id="be908" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Serial:"/>
+                            </properties>
+                          </component>
+                          <component id="c5ff2" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Fuel:"/>
+                            </properties>
+                          </component>
+                          <component id="755bc" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Model:"/>
+                            </properties>
+                          </component>
+                          <component id="2c41b" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Year:"/>
+                            </properties>
+                          </component>
+                          <component id="1d8e" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Kilometer"/>
+                            </properties>
+                          </component>
+                          <component id="94ba2" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Car Color"/>
+                            </properties>
+                          </component>
+                          <component id="c1847" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Power:"/>
+                            </properties>
+                          </component>
+                          <component id="75ef5" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Capacity"/>
+                            </properties>
+                          </component>
+                          <component id="455db" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Price:"/>
+                            </properties>
+                          </component>
+                          <component id="567e5" class="javax.swing.JLabel" binding="carbigInfo">
+                            <constraints>
+                              <grid row="0" column="0" row-span="10" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value=""/>
+                              <verifyInputWhenFocusTarget value="true"/>
+                            </properties>
+                          </component>
+                          <component id="bdbf9" class="javax.swing.JTextArea" binding="carFuelprivate">
+                            <constraints>
+                              <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="13ab8" class="javax.swing.JTextArea" binding="carModelprivate">
+                            <constraints>
+                              <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="31ec1" class="javax.swing.JTextArea" binding="carYearprivate">
+                            <constraints>
+                              <grid row="4" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="27ff9" class="javax.swing.JTextArea" binding="carKmprivate">
+                            <constraints>
+                              <grid row="5" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="a851d" class="javax.swing.JTextArea" binding="carColorprivate">
+                            <constraints>
+                              <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="e038" class="javax.swing.JTextArea" binding="carEnginePprivate">
+                            <constraints>
+                              <grid row="7" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="b9f6d" class="javax.swing.JTextArea" binding="carEngineCrivate">
+                            <constraints>
+                              <grid row="8" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="103f1" class="javax.swing.JTextArea" binding="carPriceprivate">
+                            <constraints>
+                              <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="d2af3" class="javax.swing.JTextArea" binding="carMakeprivate">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="e2164" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Stock:"/>
+                            </properties>
+                          </component>
+                          <component id="62c3a" class="javax.swing.JTextArea" binding="carStockPrivate">
+                            <constraints>
+                              <grid row="10" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="7d807" class="javax.swing.JButton" binding="adminDelete1">
+                            <constraints>
+                              <grid row="11" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Delete"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="ff203" class="javax.swing.JTextArea" binding="carSerialprivate">
+                            <constraints>
+                              <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-2690825"/>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="96400" class="javax.swing.JButton" binding="carContractButton">
+                            <constraints>
+                              <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="Contract"/>
+                            </properties>
+                          </component>
+                          <component id="31c82" class="javax.swing.JButton" binding="adminEdit1">
+                            <constraints>
+                              <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Edit"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="98030" class="javax.swing.JButton" binding="adminUpdate1">
+                            <constraints>
+                              <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Update"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="e4de8" binding="addVehiclePanel" layout-manager="GridLayoutManager" row-count="19" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card2"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="dc750" class="javax.swing.JLabel" binding="addCarMake">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="49118"/>
+                              <text value="Make"/>
+                            </properties>
+                          </component>
+                          <vspacer id="5f849">
+                            <constraints>
+                              <grid row="18" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </vspacer>
+                          <component id="4c84c" class="javax.swing.JLabel" binding="addVehicleFuel">
+                            <constraints>
+                              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="e3d4e"/>
+                              <text value="Fuel"/>
+                            </properties>
+                          </component>
+                          <component id="ca20b" class="javax.swing.JLabel" binding="addVehicleModel">
+                            <constraints>
+                              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="3a859"/>
+                              <text value="Model"/>
+                            </properties>
+                          </component>
+                          <component id="45f7f" class="javax.swing.JLabel" binding="addVehicleYear">
+                            <constraints>
+                              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="2dde6"/>
+                              <text value="Year"/>
+                            </properties>
+                          </component>
+                          <component id="631f8" class="javax.swing.JLabel" binding="addVehicleKilometer">
+                            <constraints>
+                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="20245"/>
+                              <text value="Kilometer"/>
+                            </properties>
+                          </component>
+                          <component id="23d6c" class="javax.swing.JLabel" binding="addVehicleColor">
+                            <constraints>
+                              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="727bb"/>
+                              <text value="Color"/>
+                            </properties>
+                          </component>
+                          <component id="c06c8" class="javax.swing.JLabel" binding="addVehicleEnginePower">
+                            <constraints>
+                              <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="c7e75"/>
+                              <text value="Engine Power"/>
+                            </properties>
+                          </component>
+                          <component id="f7727" class="javax.swing.JLabel" binding="addVehicleEngineCapacity">
+                            <constraints>
+                              <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="d34dd"/>
+                              <text value="Engine Capacity"/>
+                            </properties>
+                          </component>
+                          <component id="dd3d4" class="javax.swing.JLabel" binding="addVehiclePrice">
+                            <constraints>
+                              <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="6dc04"/>
+                              <text value="Price"/>
+                            </properties>
+                          </component>
+                          <component id="65e73" class="javax.swing.JLabel" binding="addVehicleStock">
+                            <constraints>
+                              <grid row="16" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="696bb"/>
+                              <text value="Stock"/>
+                            </properties>
+                          </component>
+                          <component id="49118" class="javax.swing.JTextField" binding="addVehicleMakeText">
+                            <constraints>
+                              <grid row="2" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="e8eff" class="javax.swing.JTextField" binding="addVehicleSerialText">
+                            <constraints>
+                              <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="e3d4e" class="javax.swing.JTextField" binding="addVehicleFuelText">
+                            <constraints>
+                              <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="3a859" class="javax.swing.JTextField" binding="addVehicleModelText">
+                            <constraints>
+                              <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="2dde6" class="javax.swing.JTextField" binding="addVehicleYearText">
+                            <constraints>
+                              <grid row="9" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="20245" class="javax.swing.JTextField" binding="addVehicleKilometerText">
+                            <constraints>
+                              <grid row="10" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="727bb" class="javax.swing.JTextField" binding="addVehicleColorText">
+                            <constraints>
+                              <grid row="11" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="c7e75" class="javax.swing.JTextField" binding="addVehicleEnginePowerText">
+                            <constraints>
+                              <grid row="12" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="d34dd" class="javax.swing.JTextField" binding="addVehicleEngineCapacityText">
+                            <constraints>
+                              <grid row="13" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="6dc04" class="javax.swing.JTextField" binding="addVehiclePriceText">
+                            <constraints>
+                              <grid row="15" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="696bb" class="javax.swing.JTextField" binding="addVehicleStockText">
+                            <constraints>
+                              <grid row="16" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="607e3" class="javax.swing.JLabel" binding="addMotoType">
+                            <constraints>
+                              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="54027"/>
+                              <text value="Type"/>
+                            </properties>
+                          </component>
+                          <component id="de6b" class="javax.swing.JLabel" binding="addMotoCooling">
+                            <constraints>
+                              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="5c69b"/>
+                              <text value="Cooling"/>
+                            </properties>
+                          </component>
+                          <component id="94ebd" class="javax.swing.JLabel" binding="addMotoCylinder">
+                            <constraints>
+                              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="9ab70"/>
+                              <text value="Cylinder"/>
+                            </properties>
+                          </component>
+                          <component id="54027" class="javax.swing.JTextField" binding="addMotoTypeText">
+                            <constraints>
+                              <grid row="6" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="5c69b" class="javax.swing.JTextField" binding="addMotoCoolingText">
+                            <constraints>
+                              <grid row="7" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="9ab70" class="javax.swing.JTextField" binding="addMotoCylinderText">
+                            <constraints>
+                              <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="2f84c" class="javax.swing.JLabel" binding="addJeepTraction">
+                            <constraints>
+                              <grid row="14" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="2bfad"/>
+                              <text value="Traction"/>
+                            </properties>
+                          </component>
+                          <component id="2bfad" class="javax.swing.JTextField" binding="addJeepTractionText">
+                            <constraints>
+                              <grid row="14" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="3" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="bd4df" class="javax.swing.JLabel" binding="addVehicleSerial">
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="2" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="e8eff"/>
+                              <text value="Serial"/>
+                            </properties>
+                          </component>
+                          <component id="76ddc" class="javax.swing.JButton" binding="imageUploadButton">
+                            <constraints>
+                              <grid row="17" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="Add Image"/>
+                            </properties>
+                          </component>
+                          <component id="81649" class="javax.swing.JLabel" binding="imageLabel">
+                            <constraints>
+                              <grid row="1" column="4" row-span="16" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="e943e" class="javax.swing.JButton" binding="addVehicle2Button">
+                            <constraints>
+                              <grid row="17" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="3" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="Add Vehicle"/>
+                            </properties>
+                          </component>
+                          <hspacer id="a5db4">
+                            <constraints>
+                              <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <vspacer id="c9c18">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </vspacer>
+                          <hspacer id="d12e3">
+                            <constraints>
+                              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                        </children>
+                      </grid>
+                      <grid id="4b9ba" binding="motorInfoPanel" layout-manager="GridLayoutManager" row-count="13" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card7"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="9ece2" class="javax.swing.JLabel" binding="motorbigInfo">
+                            <constraints>
+                              <grid row="0" column="0" row-span="11" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="39e9" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Type:"/>
+                            </properties>
+                          </component>
+                          <component id="e442a" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Cooling:"/>
+                            </properties>
+                          </component>
+                          <component id="837f6" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Model:"/>
+                            </properties>
+                          </component>
+                          <component id="32f6b" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Cyclinder:"/>
+                            </properties>
+                          </component>
+                          <component id="a75b" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Year:"/>
+                            </properties>
+                          </component>
+                          <component id="68c1e" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Kilometer:"/>
+                            </properties>
+                          </component>
+                          <component id="2ad12" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Power:"/>
+                            </properties>
+                          </component>
+                          <component id="1e1bd" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Capacity"/>
+                            </properties>
+                          </component>
+                          <component id="53a62" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Price:"/>
+                            </properties>
+                          </component>
+                          <component id="d228e" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Make:"/>
+                            </properties>
+                          </component>
+                          <component id="fac6a" class="javax.swing.JTextArea" binding="motoMakePrivate">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="f7a01" class="javax.swing.JTextArea" binding="motoTypePrivate">
+                            <constraints>
+                              <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="fc191" class="javax.swing.JTextArea" binding="motoCoolingPrivate">
+                            <constraints>
+                              <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="a1efc" class="javax.swing.JTextArea" binding="motoModelPrivate">
+                            <constraints>
+                              <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="ea1a6" class="javax.swing.JTextArea" binding="motoCyclinderPrivate">
+                            <constraints>
+                              <grid row="5" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="69521" class="javax.swing.JTextArea" binding="motoYearPrivate">
+                            <constraints>
+                              <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="fb21c" class="javax.swing.JTextArea" binding="motoKmPrivate">
+                            <constraints>
+                              <grid row="7" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="38c89" class="javax.swing.JTextArea" binding="motoEnginePPrivate">
+                            <constraints>
+                              <grid row="8" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="af5df" class="javax.swing.JTextArea" binding="motoEngineCPrivate">
+                            <constraints>
+                              <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="95d0e" class="javax.swing.JTextArea" binding="motoPricePrivate">
+                            <constraints>
+                              <grid row="10" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <enabled value="true"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="ddb4" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Color:"/>
+                            </properties>
+                          </component>
+                          <component id="6d819" class="javax.swing.JTextArea" binding="motoColorPrivate">
+                            <constraints>
+                              <grid row="4" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="28687" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Stock:"/>
+                            </properties>
+                          </component>
+                          <component id="4d970" class="javax.swing.JTextArea" binding="motoStockPrivate">
+                            <constraints>
+                              <grid row="11" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="663fa" class="javax.swing.JButton" binding="adminEdit2">
+                            <constraints>
+                              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Edit"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="5b0e9" class="javax.swing.JButton" binding="adminDelete2">
+                            <constraints>
+                              <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Delete"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="97f55" class="javax.swing.JButton" binding="motoContractButton">
+                            <constraints>
+                              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="Contract"/>
+                            </properties>
+                          </component>
+                          <component id="7913d" class="javax.swing.JButton" binding="adminUpdate2">
+                            <constraints>
+                              <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Update"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <grid id="2e4e" binding="suvInfoPanel" layout-manager="GridLayoutManager" row-count="13" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <card name="Card5"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="be1f" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Make:"/>
+                            </properties>
+                          </component>
+                          <component id="49be" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Serial:"/>
+                            </properties>
+                          </component>
+                          <component id="96c3d" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Fuel:"/>
+                            </properties>
+                          </component>
+                          <component id="26d56" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Model:"/>
+                            </properties>
+                          </component>
+                          <component id="b76b7" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Traction"/>
+                            </properties>
+                          </component>
+                          <component id="974bb" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Year"/>
+                            </properties>
+                          </component>
+                          <component id="3d340" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Kilometer"/>
+                            </properties>
+                          </component>
+                          <component id="156c5" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Color"/>
+                            </properties>
+                          </component>
+                          <component id="31a84" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Capacity"/>
+                            </properties>
+                          </component>
+                          <component id="ba40b" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Engine Power"/>
+                            </properties>
+                          </component>
+                          <component id="c5da9" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Price"/>
+                            </properties>
+                          </component>
+                          <component id="d4b62" class="javax.swing.JLabel" binding="suvbigInfo">
+                            <constraints>
+                              <grid row="0" column="0" row-span="11" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="59927" class="javax.swing.JTextArea" binding="suvMake">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="cce44" class="javax.swing.JTextArea" binding="suvSerial">
+                            <constraints>
+                              <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="53c97" class="javax.swing.JTextArea" binding="suvFuel">
+                            <constraints>
+                              <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="dfbd8" class="javax.swing.JTextArea" binding="suvModel">
+                            <constraints>
+                              <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="9de2" class="javax.swing.JTextArea" binding="suvTraction">
+                            <constraints>
+                              <grid row="4" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="6f7b9" class="javax.swing.JTextArea" binding="suvYear">
+                            <constraints>
+                              <grid row="5" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="a0784" class="javax.swing.JTextArea" binding="suvKm">
+                            <constraints>
+                              <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="7184b" class="javax.swing.JTextArea" binding="suvColor">
+                            <constraints>
+                              <grid row="7" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="a113c" class="javax.swing.JTextArea" binding="suvEngineC">
+                            <constraints>
+                              <grid row="8" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="81984" class="javax.swing.JTextArea" binding="suvEngineP">
+                            <constraints>
+                              <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="73491" class="javax.swing.JTextArea" binding="suvPrice">
+                            <constraints>
+                              <grid row="10" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="41b53" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <foreground color="-16777216"/>
+                              <text value="Stock"/>
+                            </properties>
+                          </component>
+                          <component id="f55d4" class="javax.swing.JTextArea" binding="suvStockP">
+                            <constraints>
+                              <grid row="11" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <editable value="false"/>
+                              <font name="DialogInput" size="14" style="1"/>
+                              <text value=""/>
+                            </properties>
+                          </component>
+                          <component id="2f4aa" class="javax.swing.JButton" binding="adminEdit3">
+                            <constraints>
+                              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Edit"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="4b3bc" class="javax.swing.JButton" binding="adminDelete3">
+                            <constraints>
+                              <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Delete"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                          <component id="ce992" class="javax.swing.JButton" binding="suvContractButton">
+                            <constraints>
+                              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="Contract"/>
+                            </properties>
+                          </component>
+                          <component id="5a07f" class="javax.swing.JButton" binding="adminUpdate3">
+                            <constraints>
+                              <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-786945"/>
+                              <text value="Update"/>
+                              <visible value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+              <component id="923ff" class="javax.swing.JButton" binding="addVehicle1Button">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Add Vehicle"/>
+                  <visible value="false"/>
+                </properties>
+              </component>
+              <component id="e363f" class="javax.swing.JButton" binding="backButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="18" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="&lt;"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="bc303" binding="contractParentPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+            <constraints>
+              <card name="Card5"/>
+            </constraints>
+            <properties/>
+            <border type="bevel-lowered"/>
+            <children>
+              <scrollpane id="69342" binding="scrollPane2">
+                <constraints>
+                  <card name="Card3"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="e0ecc" binding="contractDefaultPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints/>
+                    <properties>
+                      <background color="-2690825"/>
+                      <visible value="true"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="6d7cd" class="javax.swing.JTable" binding="myRentedVehicleTable">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                      </component>
+                      <component id="410e2" class="javax.swing.JTable" binding="adminContractTable">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                          <visible value="false"/>
+                        </properties>
+                      </component>
+                      <grid id="e8949" binding="seeVehiclesPanel" layout-manager="GridLayoutManager" row-count="1" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-2690825"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="eeed0" class="javax.swing.JButton" binding="seeVehiclesButton" default-binding="true">
+                            <constraints>
+                              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <font name="Fira Code" size="14" style="1"/>
+                              <foreground color="-1"/>
+                              <text value="See Vehicles&#10;"/>
+                            </properties>
+                          </component>
+                          <component id="bbc27" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <foreground color="-16777216"/>
+                              <labelFor value="f2063"/>
+                              <text value="Iade etmek istediginiz aracin idsini giriniz"/>
+                            </properties>
+                          </component>
+                          <component id="f2063" class="javax.swing.JTextField" binding="iadeField">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                                <preferred-size width="150" height="-1"/>
+                              </grid>
+                            </constraints>
+                            <properties/>
+                          </component>
+                          <component id="3e376" class="javax.swing.JButton" binding="iadeButton" default-binding="true">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <background color="-11758696"/>
+                              <foreground color="-1"/>
+                              <text value="Iade"/>
+                            </properties>
+                          </component>
+                          <hspacer id="d321e">
+                            <constraints>
+                              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                        </children>
+                      </grid>
+                    </children>
+                  </grid>
+                </children>
+              </scrollpane>
+              <grid id="65753" binding="contractActionPanel" layout-manager="GridLayoutManager" row-count="9" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <card name="Card2"/>
+                </constraints>
+                <properties>
+                  <background color="-2690825"/>
+                </properties>
+                <border type="bevel-lowered"/>
+                <children>
+                  <component id="f2ac6" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <font name="DialogInput" size="36" style="1"/>
+                      <foreground color="-16777216"/>
+                      <text value="RENTAL CONTRACT"/>
+                    </properties>
+                  </component>
+                  <component id="6c814" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Vehicle return date"/>
+                    </properties>
+                  </component>
+                  <component id="f5c49" class="javax.swing.JFormattedTextField" binding="vehicleReturnField">
+                    <constraints>
+                      <grid row="2" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="69bd" class="javax.swing.JTextField" binding="addressField">
+                    <constraints>
+                      <grid row="2" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="e1eaf" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="4" column="0" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Card Information"/>
+                    </properties>
+                  </component>
+                  <component id="27fb0" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Card number"/>
+                    </properties>
+                  </component>
+                  <component id="b230b" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Card date"/>
+                    </properties>
+                  </component>
+                  <component id="878b" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="address"/>
+                    </properties>
+                  </component>
+                  <component id="41fb" class="javax.swing.JLabel" binding="contractImage">
+                    <constraints>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="22215" class="javax.swing.JLabel" binding="vehicleInfo">
+                    <constraints>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value=""/>
+                    </properties>
+                  </component>
+                  <component id="dc2a5" class="javax.swing.JFormattedTextField" binding="cardNumberField">
+                    <constraints>
+                      <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="635fc" class="javax.swing.JFormattedTextField" binding="cardDateField">
+                    <constraints>
+                      <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="dbbba" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="2" column="0" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Personel Information"/>
+                    </properties>
+                  </component>
+                  <component id="f0562" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="3" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Car Information"/>
+                    </properties>
+                  </component>
+                  <component id="ae966" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-16777216"/>
+                      <foreground color="-16777216"/>
+                      <text value="Fee"/>
+                    </properties>
+                  </component>
+                  <component id="fc7e2" class="javax.swing.JTextField" binding="feeField">
+                    <constraints>
+                      <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="fd793" class="javax.swing.JButton" binding="rentButton">
+                    <constraints>
+                      <grid row="8" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="kirala"/>
+                    </properties>
+                  </component>
+                  <component id="9d79b" class="javax.swing.JTextArea" binding="cinfo">
+                    <constraints>
+                      <grid row="4" column="3" row-span="3" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="50"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <background color="-2690825"/>
+                      <foreground color="-16777216"/>
+                      <text value="&#9;&#9;&#9;SOZLESME&#10;1-sadasdscac&#10;2-VnALNsKLcmcmsa&#10;3- DLA&lt;ScmASLmcASKL&#10;4- dslamklcmalms"/>
+                    </properties>
+                  </component>
+                  <component id="496e5" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="Card cvc"/>
+                    </properties>
+                  </component>
+                  <component id="7a844" class="javax.swing.JFormattedTextField" binding="cardCvcField">
+                    <constraints>
+                      <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="bfb57" class="javax.swing.JLabel">
+                    <constraints>
+                      <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <foreground color="-16777216"/>
+                      <text value="kasko+ sigorta (20$)"/>
+                    </properties>
+                  </component>
+                  <component id="20c05" class="javax.swing.JCheckBox" binding="wantCheckbox">
+                    <constraints>
+                      <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="istiyorum"/>
+                    </properties>
+                  </component>
+                  <component id="e7dd4" class="javax.swing.JCheckBox" binding="acceptCheckbox">
+                    <constraints>
+                      <grid row="7" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <text value="accept this contract"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="61c8a" binding="accountPanel" layout-manager="GridLayoutManager" row-count="14" column-count="8" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card2"/>
+            </constraints>
+            <properties>
+              <background color="-2690825"/>
+              <preferredSize width="450" height="385"/>
+            </properties>
+            <border type="bevel-lowered"/>
+            <children>
+              <component id="5b335" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <text value="E-Mail"/>
+                </properties>
+              </component>
+              <component id="37c39" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="8" column="1" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <text value="Password"/>
+                </properties>
+              </component>
+              <component id="ad16e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="true"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <text value="Phone Number"/>
+                </properties>
+              </component>
+              <component id="53930" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <text value="Surname"/>
+                </properties>
+              </component>
+              <hspacer id="3714b">
+                <constraints>
+                  <grid row="13" column="6" row-span="1" col-span="2" vsize-policy="5" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="14" height="36"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <component id="38507" class="javax.swing.JTextArea" binding="nameArea">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <tabSize value="5"/>
+                </properties>
+              </component>
+              <component id="c4690" class="javax.swing.JTextArea" binding="surnameArea">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <tabSize value="5"/>
+                </properties>
+              </component>
+              <component id="9233c" class="javax.swing.JTextArea" binding="phoneArea">
+                <constraints>
+                  <grid row="5" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                </properties>
+              </component>
+              <component id="e3331" class="javax.swing.JTextArea" binding="emailArea">
+                <constraints>
+                  <grid row="7" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                </properties>
+              </component>
+              <component id="f05f" class="javax.swing.JTextArea" binding="passwordArea">
+                <constraints>
+                  <grid row="9" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                  <font name="DialogInput" size="14" style="1"/>
+                </properties>
+              </component>
+              <component id="18f04" class="javax.swing.JButton" binding="signOutButton" default-binding="true">
+                <constraints>
+                  <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <text value="Sign out"/>
+                </properties>
+              </component>
+              <component id="2c8a5" class="javax.swing.JLabel" binding="ppLabel" custom-create="true">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <hspacer id="ea89e">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="90" height="11"/>
+                  </grid>
+                </constraints>
+              </hspacer>
+              <component id="a0e1e" class="javax.swing.JButton" binding="deleteButton">
+                <constraints>
+                  <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-1767936"/>
+                  <enabled value="true"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <hideActionText value="false"/>
+                  <text value="DELETE"/>
+                </properties>
+              </component>
+              <component id="f231" class="javax.swing.JButton" binding="editButton">
+                <constraints>
+                  <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <text value="EDIT"/>
+                </properties>
+              </component>
+              <component id="40df3" class="javax.swing.JButton" binding="updateButton" default-binding="true">
+                <constraints>
+                  <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <text value="UPDATE"/>
+                  <visible value="false"/>
+                </properties>
+              </component>
+              <component id="c651c" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="10" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <foreground color="-16777216"/>
+                  <text value="Admin Key"/>
+                </properties>
+              </component>
+              <component id="2dfc5" class="javax.swing.JTextArea" binding="adminKey">
+                <constraints>
+                  <grid row="11" column="1" row-span="1" col-span="5" vsize-policy="6" hsize-policy="6" anchor="9" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="273" height="20"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <font name="DialogInput" size="14" style="1"/>
+                  <opaque value="true"/>
+                  <tabSize value="5"/>
+                </properties>
+              </component>
+              <component id="b111f" class="javax.swing.JButton" binding="adminButton">
+                <constraints>
+                  <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <text value="Admin Login"/>
+                </properties>
+              </component>
+              <hspacer id="e2c9c">
+                <constraints>
+                  <grid row="6" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+            </children>
+          </grid>
+          <grid id="6e833" binding="adminPanel" layout-manager="GridLayoutManager" row-count="4" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card3"/>
+            </constraints>
+            <properties>
+              <background color="-2690825"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="a3893" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <labelFor value="aa565"/>
+                  <text value="Vehicle Type"/>
+                </properties>
+              </component>
+              <component id="6b591" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <labelFor value="b4454"/>
+                  <text value="User Number"/>
+                </properties>
+              </component>
+              <component id="bd12" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="2" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <labelFor value="372d9"/>
+                  <text value="On rented vehicle"/>
+                </properties>
+              </component>
+              <component id="c9a66" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="3" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <labelFor value="a4310"/>
+                  <text value="Revenue"/>
+                </properties>
+              </component>
+              <component id="d0463" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <foreground color="-16777216"/>
+                  <labelFor value="25405"/>
+                  <text value="Vehicle Stock"/>
+                </properties>
+              </component>
+              <component id="aa565" class="javax.swing.JTextField" binding="adminVehicleType">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="6" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="b4454" class="javax.swing.JTextField" binding="adminUserNumber">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="372d9" class="javax.swing.JTextField" binding="adminOnRentedVehicle">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="a4310" class="javax.swing.JTextField" binding="adminRevenue">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <component id="25405" class="javax.swing.JTextField" binding="adminVehicleStock">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <editable value="false"/>
+                </properties>
+              </component>
+              <vspacer id="53765">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="88d05">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <grid id="29c63" binding="MenuButtonPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-9605006"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="68546" binding="menuOpen" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <background color="-1773569"/>
+              <enabled value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="2e817" class="javax.swing.JButton" binding="menu">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <enabled value="true"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Menu"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="29afe" binding="MenuClose" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card2"/>
+            </constraints>
+            <properties>
+              <background color="-1773569"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="34102" class="javax.swing.JButton" binding="menuCloseButton">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-11758696"/>
+                  <font name="Fira Code" size="14" style="1"/>
+                  <foreground color="-1"/>
+                  <text value="Menu"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <hspacer id="3c74b">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="17eb4">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <grid id="d4c10" binding="vehicleTypePanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-6577492"/>
+          <visible value="false"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="69701" class="javax.swing.JRadioButton" binding="carRadioButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-6577492"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="Car"/>
+            </properties>
+          </component>
+          <component id="7e292" class="javax.swing.JRadioButton" binding="motorcycleRadioButton" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-6577492"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <selected value="false"/>
+              <text value="Motorcycle"/>
+            </properties>
+          </component>
+          <component id="6794b" class="javax.swing.JRadioButton" binding="suvRadioButton">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-6577492"/>
+              <font name="Fira Code" size="14" style="1"/>
+              <foreground color="-1"/>
+              <text value="SUV"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="vehicleType">
+      <member id="7e292"/>
+      <member id="69701"/>
+      <member id="6794b"/>
+    </group>
+  </buttonGroups>
+</form>
