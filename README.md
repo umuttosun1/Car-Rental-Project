@@ -80,4 +80,4 @@ Vehicle photos uploaded by an admin are stored in `%USERPROFILE%\SwiftWheels\veh
 
 ## Authors
 
-Mehmet Durucu, Diyar Alma, Umut Tosun
+Umut Tosun
