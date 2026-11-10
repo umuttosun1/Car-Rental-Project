@@ -1,0 +1,5 @@
+# Copy this file to "db.properties" next to SwiftWheels.exe (or the project folder when running from
+# the IDE) and adjust it. Environment variables SWIFTWHEELS_DB_URL / _USER / _PASSWORD override it.
+db.url=jdbc:postgresql://localhost:5432/swiftwheels
+db.user=swiftwheels
+db.password=swiftwheels
