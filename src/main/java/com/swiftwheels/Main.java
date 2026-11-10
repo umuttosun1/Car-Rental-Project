@@ -2,6 +2,7 @@ package com.swiftwheels;
 
 import com.swiftwheels.db.Database;
 import com.swiftwheels.ui.LoginRegisterPanel;
+import com.swiftwheels.ui.Theme;
 
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
+            Theme.install();
             if (!databaseReachable()) {
                 System.exit(1);
             }

@@ -75,6 +75,8 @@ Vehicle photos uploaded by an admin are stored in `%USERPROFILE%\SwiftWheels\veh
   missing default images, images not found when started from another folder, table headers not shown,
   e-mails other than `.com` rejected.
 - Clearer error messages from the database, input validation for vehicles and rentals, tests.
+- Modern look: FlatLaf theme, Segoe UI instead of monospace fonts, refreshed teal palette,
+  vehicle cards with photo, price and stock badge, stat cards on the admin dashboard.
 
 ## Authors
 

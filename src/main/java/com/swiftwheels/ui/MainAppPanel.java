@@ -37,8 +37,6 @@ import java.util.function.Function;
 
 /** The application window after login. The layout lives in MainAppPanel.form (IntelliJ GUI Designer). */
 public class MainAppPanel {
-    private static final Color ACCENT = new Color(76, 147, 152);
-    private static final Color CARD_BACKGROUND = new Color(214, 240, 247);
     private static final int MAX_RENTAL_DAYS = 365;
     private static final DateTimeFormatter RETURN_DATE_FORMAT =
             DateTimeFormatter.ofPattern("dd/MM/uuuu").withResolverStyle(ResolverStyle.STRICT);
@@ -229,6 +227,7 @@ public class MainAppPanel {
         feeField.setEditable(false);
         cinfo.setEditable(false);
         installInputMasks();
+        applyVisualStyle();
 
         setupMenu();
         setupAccountPage();
@@ -251,6 +250,97 @@ public class MainAppPanel {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+    }
+
+    // =====================================================================
+    //  Visual polish on top of the .form layout
+    // =====================================================================
+
+    private void applyVisualStyle() {
+        // vehicle type selector as a teal tab bar
+        vehicleTypePanel.setBackground(Theme.ACCENT);
+        for (JRadioButton rb : new JRadioButton[]{carRadioButton, motorcycleRadioButton, suvRadioButton}) {
+            rb.setBackground(Theme.ACCENT);
+            rb.setForeground(Color.WHITE);
+            rb.setFont(rb.getFont().deriveFont(Font.BOLD, 15f));
+            rb.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+            rb.setFocusPainted(false);
+        }
+        vehicleTypePanel.setBorder(BorderFactory.createEmptyBorder(6, 12, 6, 12));
+
+        // detail pages: muted labels, regular-weight values, price highlighted
+        for (VehicleType t : VehicleType.values()) {
+            styleInfoPanel(infoPanelOf(t), fieldsOf(t));
+        }
+        for (JTextArea price : new JTextArea[]{carPriceprivate, suvPrice, motoPricePrivate}) {
+            price.setFont(price.getFont().deriveFont(Font.BOLD, 18f));
+            price.setForeground(Theme.ACCENT);
+        }
+
+        // home page "about us" text: regular weight is easier to read than all-bold
+        for (Component c : homePanel.getComponents()) {
+            if (c instanceof JTextArea about) {
+                about.setFont(about.getFont().deriveFont(Font.PLAIN, 15f));
+                about.setForeground(Theme.TEXT);
+            }
+        }
+
+        // primary actions
+        stylePrimary(rentButton);
+        rentButton.setText("Kirala");
+        styleDanger(deleteButton);
+        for (VehicleType t : VehicleType.values()) {
+            styleDanger(deleteButtonOf(t));
+        }
+
+        // admin dashboard: big numbers instead of plain text boxes
+        for (JTextField stat : new JTextField[]{adminVehicleType, adminUserNumber, adminOnRentedVehicle,
+                adminRevenue, adminVehicleStock}) {
+            stat.setEditable(false);
+            stat.setHorizontalAlignment(SwingConstants.CENTER);
+            stat.setFont(stat.getFont().deriveFont(Font.BOLD, 30f));
+            stat.setForeground(Theme.ACCENT);
+            stat.setBackground(Color.WHITE);
+            stat.putClientProperty("FlatLaf.style", "arc: 16; borderColor: #DDE6E8");
+            stat.setPreferredSize(new Dimension(170, 72));
+        }
+
+        // rental form fields a bit taller
+        for (JTextField f : new JTextField[]{addressField, cardNumberField, cardDateField, cardCvcField,
+                vehicleReturnField, feeField, iadeField}) {
+            f.setPreferredSize(new Dimension(Math.max(f.getPreferredSize().width, 200), 32));
+        }
+        feeField.setFont(feeField.getFont().deriveFont(Font.BOLD, 14f));
+        feeField.setForeground(Theme.ACCENT);
+        cinfo.setBackground(Color.WHITE);
+        cinfo.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Theme.CARD_BORDER),
+                BorderFactory.createEmptyBorder(10, 12, 10, 12)));
+    }
+
+    private static void styleInfoPanel(JPanel panel, JTextArea[] values) {
+        java.util.Set<Component> valueSet = new java.util.HashSet<>(java.util.Arrays.asList(values));
+        for (Component c : panel.getComponents()) {
+            if (c instanceof JLabel label && label.getIcon() == null) {
+                label.setForeground(Theme.TEXT_MUTED);
+                label.setFont(label.getFont().deriveFont(Font.PLAIN, 14f));
+            } else if (valueSet.contains(c)) {
+                c.setFont(c.getFont().deriveFont(Font.PLAIN, 15f));
+                c.setForeground(Theme.TEXT);
+            }
+        }
+    }
+
+    private static void stylePrimary(JButton b) {
+        b.setBackground(Theme.ACCENT);
+        b.setForeground(Color.WHITE);
+        b.setFont(b.getFont().deriveFont(Font.BOLD, 14f));
+        b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+    }
+
+    private static void styleDanger(JButton b) {
+        b.setBackground(new Color(214, 69, 69));
+        b.setForeground(Color.WHITE);
+        b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     }
 
     // =====================================================================
@@ -337,6 +427,9 @@ public class MainAppPanel {
         suvRadioButton.addActionListener(e -> showVehiclePage(suvPanel));
         motorcycleRadioButton.addActionListener(e -> showVehiclePage(motorcyclePanel));
         backButton.addActionListener(e -> showVehiclePage(listPanelOf(selectedType())));
+        scrollPane.getVerticalScrollBar().setUnitIncrement(24);
+        scrollPane.setBorder(BorderFactory.createEmptyBorder());
+        scrollPane2.getVerticalScrollBar().setUnitIncrement(24);
         seeVehiclesButton.addActionListener(e -> openVehicles());
     }
 
@@ -364,39 +457,137 @@ public class MainAppPanel {
 
     private <T extends Vehicle> void renderCards(JPanel target, List<T> vehicles, Function<T, String> detailLine) {
         target.removeAll();
-        target.setLayout(new GridLayout(0, 2, 10, 10));
+        target.setLayout(new BorderLayout());
+        target.setBackground(Theme.PAGE);
+
+        // the grid sits at NORTH so cards keep their natural height instead of stretching
+        JPanel grid = new JPanel(new GridLayout(0, 3, 18, 18));
+        grid.setOpaque(false);
+        grid.setBorder(BorderFactory.createEmptyBorder(16, 16, 16, 16));
         if (vehicles.isEmpty()) {
-            target.add(new JLabel("Bu kategoride henüz araç yok.", SwingConstants.CENTER));
+            JLabel empty = new JLabel("Bu kategoride henüz araç yok.", SwingConstants.CENTER);
+            empty.setForeground(Theme.TEXT_MUTED);
+            empty.setFont(empty.getFont().deriveFont(15f));
+            grid.add(empty);
         }
         for (T vehicle : vehicles) {
-            JPanel card = new JPanel(new BorderLayout());
-            card.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-            card.setBackground(CARD_BACKGROUND);
-
-            JLabel info = new JLabel(summaryHtml(vehicle, detailLine.apply(vehicle)), SwingConstants.CENTER);
-            info.setForeground(Color.BLACK);
-
-            JButton details = new JButton("Show Details");
-            details.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-            details.setBackground(ACCENT);
-            details.setForeground(Color.WHITE);
-            details.addActionListener(e -> openDetails(vehicle.getType(), vehicle.getId()));
-
-            card.add(new JLabel(Images.vehicleIcon(vehicle, 150, 100)), BorderLayout.WEST);
-            card.add(info, BorderLayout.CENTER);
-            card.add(details, BorderLayout.SOUTH);
-            target.add(card);
+            grid.add(vehicleCard(vehicle, detailLine.apply(vehicle)));
         }
+        target.add(grid, BorderLayout.NORTH);
         target.revalidate();
         target.repaint();
     }
 
-    private static String summaryHtml(Vehicle v, String detailLine) {
-        String stock = v.getStock() > 0 ? "Stock: " + v.getStock() : "<font color='#b00020'>Stokta yok</font>";
-        return "<html><b>" + escape(v.getMake()) + " " + escape(v.getModel()) + "</b>"
-                + "<br>" + escape(detailLine)
-                + "<br>Price: " + v.getPrice() + " $ / day"
-                + "<br>" + stock + "</html>";
+    private JPanel vehicleCard(Vehicle v, String detailLine) {
+        RoundedPanel card = new RoundedPanel(16);
+        card.setLayout(new BorderLayout(0, 10));
+        card.setBorder(BorderFactory.createEmptyBorder(14, 16, 16, 16));
+
+        JLabel image = new JLabel(Images.vehicleIcon(v, 240, 140), SwingConstants.CENTER);
+        image.setPreferredSize(new Dimension(240, 140));
+
+        JLabel title = new JLabel(v.getMake() + " " + v.getModel());
+        title.setFont(title.getFont().deriveFont(Font.BOLD, 16f));
+        title.setForeground(Theme.TEXT);
+
+        JLabel subtitle = new JLabel(v.getYear() + "  •  " + detailLine + "  •  " + v.getColor());
+        subtitle.setForeground(Theme.TEXT_MUTED);
+
+        JLabel price = new JLabel("<html><span style='font-size:17px'><b>" + v.getPrice()
+                + " $</b></span> <span style='color:#627176'>/ gün</span></html>");
+        price.setForeground(Theme.ACCENT);
+
+        JLabel stock = badge(v.getStock() > 0 ? v.getStock() + " adet müsait" : "Stokta yok",
+                v.getStock() > 0 ? Theme.SUCCESS : Theme.DANGER);
+
+        JPanel priceRow = new JPanel(new BorderLayout());
+        priceRow.setOpaque(false);
+        priceRow.add(price, BorderLayout.WEST);
+        priceRow.add(stock, BorderLayout.EAST);
+
+        JPanel text = new JPanel(new GridLayout(0, 1, 0, 4));
+        text.setOpaque(false);
+        text.add(title);
+        text.add(subtitle);
+        text.add(priceRow);
+
+        JButton details = new JButton("Detayları Gör");
+        details.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        details.setBackground(Theme.ACCENT);
+        details.setForeground(Color.WHITE);
+        details.setFont(details.getFont().deriveFont(Font.BOLD));
+        details.addActionListener(e -> openDetails(v.getType(), v.getId()));
+
+        card.add(image, BorderLayout.NORTH);
+        card.add(text, BorderLayout.CENTER);
+        card.add(details, BorderLayout.SOUTH);
+        return card;
+    }
+
+    private static JLabel badge(String text, Color color) {
+        JLabel label = new JLabel(text) {
+            @Override
+            protected void paintComponent(Graphics g) {
+                Graphics2D g2 = (Graphics2D) g.create();
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+                g2.setColor(new Color(color.getRed(), color.getGreen(), color.getBlue(), 28));
+                g2.fillRoundRect(0, 0, getWidth(), getHeight(), getHeight(), getHeight());
+                g2.dispose();
+                super.paintComponent(g);
+            }
+        };
+        label.setForeground(color);
+        label.setFont(label.getFont().deriveFont(Font.BOLD, 11.5f));
+        label.setBorder(BorderFactory.createEmptyBorder(3, 10, 3, 10));
+        return label;
+    }
+
+    /** White card with rounded corners and a border that lights up on hover. */
+    private static final class RoundedPanel extends JPanel {
+        private final int arc;
+        private boolean hover;
+
+        RoundedPanel(int arc) {
+            this.arc = arc;
+            setOpaque(false);
+            java.awt.event.MouseAdapter tracker = new java.awt.event.MouseAdapter() {
+                @Override public void mouseEntered(java.awt.event.MouseEvent e) {setHover(true);}
+                @Override public void mouseExited(java.awt.event.MouseEvent e) {
+                    // exiting into a child component is not leaving the card
+                    Point p = SwingUtilities.convertPoint(e.getComponent(), e.getPoint(), RoundedPanel.this);
+                    setHover(contains(p));
+                }
+            };
+            addMouseListener(tracker);
+            addContainerListener(new java.awt.event.ContainerAdapter() {
+                @Override public void componentAdded(java.awt.event.ContainerEvent e) {
+                    e.getChild().addMouseListener(tracker);
+                }
+            });
+        }
+
+        private void setHover(boolean value) {
+            if (hover != value) {
+                hover = value;
+                repaint();
+            }
+        }
+
+        @Override
+        protected void paintComponent(Graphics g) {
+            Graphics2D g2 = (Graphics2D) g.create();
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            // soft shadow
+            g2.setColor(new Color(0, 0, 0, hover ? 22 : 12));
+            g2.fillRoundRect(1, 3, getWidth() - 2, getHeight() - 3, arc, arc);
+            g2.setColor(Theme.CARD);
+            g2.fillRoundRect(0, 0, getWidth() - 1, getHeight() - 3, arc, arc);
+            g2.setColor(hover ? Theme.ACCENT : Theme.CARD_BORDER);
+            g2.setStroke(new BasicStroke(hover ? 1.6f : 1f));
+            g2.drawRoundRect(0, 0, getWidth() - 1, getHeight() - 4, arc, arc);
+            g2.dispose();
+            super.paintComponent(g);
+        }
     }
 
     private static String escape(String s) {
@@ -516,6 +707,12 @@ public class MainAppPanel {
     private void setEditing(VehicleType type, boolean editing) {
         for (JTextArea field : fieldsOf(type)) {
             field.setEditable(editing);
+            // make edit mode visible: white "input" look while editing, plain text otherwise
+            field.setBackground(editing ? Color.WHITE : Theme.PAGE);
+            field.setBorder(editing
+                    ? BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Theme.ACCENT),
+                    BorderFactory.createEmptyBorder(2, 6, 2, 6))
+                    : BorderFactory.createEmptyBorder(3, 7, 3, 7));
         }
         editButtonOf(type).setVisible(adminMode && !editing);
         updateButtonOf(type).setVisible(adminMode && editing);
