@@ -22,6 +22,7 @@ configurations {
 
 dependencies {
     implementation 'org.postgresql:postgresql:42.7.4'
+    implementation 'com.formdev:flatlaf:3.5.4'
     implementation "com.jetbrains.intellij.java:java-gui-forms-rt:${intellijFormsVersion}"
     formsCompiler "com.jetbrains.intellij.java:java-compiler-ant-tasks:${intellijFormsVersion}"
 

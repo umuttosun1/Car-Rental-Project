@@ -1,5 +1,6 @@
 package com.swiftwheels.ui;
 
+import com.formdev.flatlaf.FlatClientProperties;
 import com.swiftwheels.model.Customer;
 import com.swiftwheels.model.CustomerRepository;
 
@@ -40,6 +41,22 @@ public class LoginRegisterPanel {
     public LoginRegisterPanel() {
         for (JButton b : new JButton[]{createAccountButton, RegisterButton, LoginButton, backButton}) {
             b.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+        }
+
+        // FlatLaf extras: hint texts and an eye icon instead of the "show password" check boxes
+        emailLogField.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "ornek@mail.com");
+        emailRegField.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "ornek@mail.com");
+        nameField.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Adınız");
+        surnameField.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Soyadınız");
+        passwordRegField.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "En az 6 karakter");
+        for (JPasswordField field : new JPasswordField[]{passwordLoginField, passwordRegField}) {
+            field.putClientProperty(FlatClientProperties.STYLE, "showRevealButton: true");
+        }
+        passwordShowCheckBox.setVisible(false);
+        passwordShowCheckBox1.setVisible(false);
+        for (JTextField field : new JTextField[]{emailLogField, passwordLoginField, nameField, surnameField,
+                emailRegField, numberField, passwordRegField}) {
+            field.setPreferredSize(new Dimension(Math.max(field.getPreferredSize().width, 260), 34));
         }
 
         RegisterButton.addActionListener(e -> showRegisterPanel());

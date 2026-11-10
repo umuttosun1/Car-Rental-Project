@@ -7,7 +7,7 @@
     </constraints>
     <properties>
       <autoscrolls value="true"/>
-      <background color="-3024164"/>
+      <background color="-1445647"/>
       <doubleBuffered value="true"/>
       <enabled value="true"/>
       <focusCycleRoot value="true"/>
@@ -26,7 +26,7 @@
           </grid>
         </constraints>
         <properties>
-          <background color="-2690825"/>
+          <background color="-722695"/>
         </properties>
         <border type="none"/>
         <children>
@@ -78,7 +78,7 @@
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-6381149"/>
+          <background color="-15584197"/>
           <enabled value="false"/>
           <visible value="false"/>
         </properties>
@@ -89,9 +89,9 @@
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
+              <background color="-15762301"/>
               <enabled value="true"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Account"/>
             </properties>
@@ -101,8 +101,8 @@
               <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-15762301"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Contract"/>
             </properties>
@@ -112,8 +112,8 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-15762301"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Vehicle"/>
             </properties>
@@ -123,8 +123,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-15762301"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Home"/>
             </properties>
@@ -134,8 +134,8 @@
               <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-15762301"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Admin"/>
               <visible value="false"/>
@@ -146,8 +146,8 @@
               <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-11758696"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-15762301"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Log out"/>
             </properties>
@@ -169,18 +169,18 @@
               <card name="Card1"/>
             </constraints>
             <properties>
-              <background color="-2690825"/>
+              <background color="-722695"/>
               <maximumSize width="1000" height="800"/>
               <visible value="false"/>
             </properties>
-            <border type="bevel-lowered" title-position="2"/>
+            <border type="none" title-position="2"/>
             <children>
               <component id="51b64" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="28"/>
+                  <font size="28"/>
                   <foreground color="-16777216"/>
                   <text value="Kalitenin tek adresi"/>
                 </properties>
@@ -198,7 +198,7 @@
                   <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="12"/>
+                  <font size="12"/>
                   <foreground color="-16777216"/>
                   <text value="   E - MAİL : SwiftWheels@gazi.edu.tr"/>
                 </properties>
@@ -208,7 +208,7 @@
                   <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="12"/>
+                  <font size="12"/>
                   <foreground color="-16777216"/>
                   <text value="   PHONE :  0543 745 74 78 ----  0531 836 16 27"/>
                 </properties>
@@ -218,7 +218,7 @@
                   <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="12"/>
+                  <font size="12"/>
                   <foreground color="-16777216"/>
                   <text value="   LOCATİON : Emniyet, Milas Sk. No:30, 06560 Yenimahalle/Ankara"/>
                 </properties>
@@ -228,7 +228,7 @@
                   <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="12"/>
+                  <font size="12"/>
                   <foreground color="-16777216"/>
                   <text value="   INSTAGRAM : umutsn_    diyaralma361  "/>
                 </properties>
@@ -242,9 +242,9 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <background color="-2690825"/>
+                  <background color="-722695"/>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <tabSize value="6"/>
                   <text value="  Swiftwheels was founded in 2023 by Mehmet Durucu , Diyar Alma and Umut Tosun.&#10;Operating in the rental car market, Swiftwheels is the most affordable car rental&#10;company in the market.&#10;Swiftwheels is very sensitive about customer satisfaction and provides&#10;high-level services to its customers regarding their car rentals and any &#10;problems that may arise thereafter.Swiftwheels improves itself day by day with &#10;your suggestions and offersquality service to its customers. You can be sure that&#10;Swiftwheels is the company where you can rent a car at the most affordable price.&#10;"/>
@@ -255,7 +255,7 @@
                   <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="12"/>
+                  <font size="12"/>
                   <foreground color="-16777216"/>
                   <text value="© 2008-2023 Tüm Hakları Saklıdır. Swiftwheels.com"/>
                 </properties>
@@ -275,9 +275,9 @@
               <card name="Card4"/>
             </constraints>
             <properties>
-              <background color="-2690825"/>
+              <background color="-722695"/>
             </properties>
-            <border type="bevel-lowered"/>
+            <border type="none"/>
             <children>
               <scrollpane id="f7c40" binding="scrollPane">
                 <constraints>
@@ -301,11 +301,11 @@
                           <card name="Card6"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                           <foreground color="-16777216"/>
                           <minimumSize width="411" height="2000"/>
                         </properties>
-                        <border type="line"/>
+                        <border type="none"/>
                         <children/>
                       </grid>
                       <grid id="efdb0" binding="suvPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -314,9 +314,9 @@
                           <card name="Card1"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
-                        <border type="line"/>
+                        <border type="none"/>
                         <children/>
                       </grid>
                       <grid id="55e84" binding="motorcyclePanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -325,7 +325,7 @@
                           <card name="Card3"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children/>
@@ -336,7 +336,7 @@
                           <card name="Card4"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children>
@@ -346,7 +346,7 @@
                             </constraints>
                             <properties>
                               <background color="-16777216"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Make:"/>
                             </properties>
@@ -356,7 +356,7 @@
                               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Serial:"/>
                             </properties>
@@ -366,7 +366,7 @@
                               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Fuel:"/>
                             </properties>
@@ -376,7 +376,7 @@
                               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Model:"/>
                             </properties>
@@ -386,7 +386,7 @@
                               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Year:"/>
                             </properties>
@@ -396,7 +396,7 @@
                               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Kilometer"/>
                             </properties>
@@ -406,7 +406,7 @@
                               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Car Color"/>
                             </properties>
@@ -416,7 +416,7 @@
                               <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Power:"/>
                             </properties>
@@ -426,7 +426,7 @@
                               <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Capacity"/>
                             </properties>
@@ -436,7 +436,7 @@
                               <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Price:"/>
                             </properties>
@@ -455,9 +455,9 @@
                               <grid row="2" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -467,9 +467,9 @@
                               <grid row="3" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -479,9 +479,9 @@
                               <grid row="4" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -491,9 +491,9 @@
                               <grid row="5" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -503,9 +503,9 @@
                               <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -515,9 +515,9 @@
                               <grid row="7" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -527,9 +527,9 @@
                               <grid row="8" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -539,9 +539,9 @@
                               <grid row="9" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -551,9 +551,9 @@
                               <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -562,7 +562,7 @@
                               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Stock:"/>
                             </properties>
@@ -572,9 +572,9 @@
                               <grid row="10" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -583,9 +583,9 @@
                               <grid row="11" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Delete"/>
                               <visible value="false"/>
                             </properties>
@@ -595,9 +595,9 @@
                               <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-2690825"/>
+                              <background color="-722695"/>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -607,8 +607,8 @@
                               <grid row="11" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="Contract"/>
                             </properties>
@@ -618,9 +618,9 @@
                               <grid row="11" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Edit"/>
                               <visible value="false"/>
                             </properties>
@@ -630,9 +630,9 @@
                               <grid row="11" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Update"/>
                               <visible value="false"/>
                             </properties>
@@ -645,7 +645,7 @@
                           <card name="Card2"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children>
@@ -929,8 +929,8 @@
                               <grid row="17" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="Add Image"/>
                             </properties>
@@ -949,8 +949,8 @@
                               <grid row="17" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="3" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="Add Vehicle"/>
                             </properties>
@@ -978,7 +978,7 @@
                           <card name="Card7"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children>
@@ -995,7 +995,7 @@
                               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Type:"/>
                             </properties>
@@ -1005,7 +1005,7 @@
                               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Cooling:"/>
                             </properties>
@@ -1015,7 +1015,7 @@
                               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Model:"/>
                             </properties>
@@ -1025,7 +1025,7 @@
                               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Cyclinder:"/>
                             </properties>
@@ -1035,7 +1035,7 @@
                               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Year:"/>
                             </properties>
@@ -1045,7 +1045,7 @@
                               <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Kilometer:"/>
                             </properties>
@@ -1055,7 +1055,7 @@
                               <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Power:"/>
                             </properties>
@@ -1065,7 +1065,7 @@
                               <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Capacity"/>
                             </properties>
@@ -1075,7 +1075,7 @@
                               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Price:"/>
                             </properties>
@@ -1085,7 +1085,7 @@
                               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Make:"/>
                             </properties>
@@ -1096,7 +1096,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1107,7 +1107,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1118,7 +1118,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1129,7 +1129,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1140,7 +1140,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1151,7 +1151,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1162,7 +1162,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1173,7 +1173,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1184,7 +1184,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1196,7 +1196,7 @@
                             <properties>
                               <editable value="false"/>
                               <enabled value="true"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1206,7 +1206,7 @@
                               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Color:"/>
                             </properties>
@@ -1217,7 +1217,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value=""/>
                             </properties>
@@ -1227,7 +1227,7 @@
                               <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Stock:"/>
                             </properties>
@@ -1238,7 +1238,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1247,9 +1247,9 @@
                               <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Edit"/>
                               <visible value="false"/>
                             </properties>
@@ -1259,9 +1259,9 @@
                               <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Delete"/>
                               <visible value="false"/>
                             </properties>
@@ -1271,8 +1271,8 @@
                               <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="Contract"/>
                             </properties>
@@ -1282,9 +1282,9 @@
                               <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Update"/>
                               <visible value="false"/>
                             </properties>
@@ -1297,7 +1297,7 @@
                           <card name="Card5"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children>
@@ -1306,7 +1306,7 @@
                               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Make:"/>
                             </properties>
@@ -1316,7 +1316,7 @@
                               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Serial:"/>
                             </properties>
@@ -1326,7 +1326,7 @@
                               <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Fuel:"/>
                             </properties>
@@ -1336,7 +1336,7 @@
                               <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Model:"/>
                             </properties>
@@ -1346,7 +1346,7 @@
                               <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Traction"/>
                             </properties>
@@ -1356,7 +1356,7 @@
                               <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Year"/>
                             </properties>
@@ -1366,7 +1366,7 @@
                               <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Kilometer"/>
                             </properties>
@@ -1376,7 +1376,7 @@
                               <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Color"/>
                             </properties>
@@ -1386,7 +1386,7 @@
                               <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Capacity"/>
                             </properties>
@@ -1396,7 +1396,7 @@
                               <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Engine Power"/>
                             </properties>
@@ -1406,7 +1406,7 @@
                               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Price"/>
                             </properties>
@@ -1425,7 +1425,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1435,7 +1435,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1445,7 +1445,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1455,7 +1455,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1465,7 +1465,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1475,7 +1475,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1485,7 +1485,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1495,7 +1495,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1505,7 +1505,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1515,7 +1515,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1525,7 +1525,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1534,7 +1534,7 @@
                               <grid row="11" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <foreground color="-16777216"/>
                               <text value="Stock"/>
                             </properties>
@@ -1545,7 +1545,7 @@
                             </constraints>
                             <properties>
                               <editable value="false"/>
-                              <font name="DialogInput" size="14" style="1"/>
+                              <font size="14" style="1"/>
                               <text value=""/>
                             </properties>
                           </component>
@@ -1554,9 +1554,9 @@
                               <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Edit"/>
                               <visible value="false"/>
                             </properties>
@@ -1566,9 +1566,9 @@
                               <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Delete"/>
                               <visible value="false"/>
                             </properties>
@@ -1578,8 +1578,8 @@
                               <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="Contract"/>
                             </properties>
@@ -1589,9 +1589,9 @@
                               <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
-                              <foreground color="-786945"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
+                              <foreground color="-1"/>
                               <text value="Update"/>
                               <visible value="false"/>
                             </properties>
@@ -1609,8 +1609,8 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <foreground color="-1"/>
                   <text value="Add Vehicle"/>
                   <visible value="false"/>
@@ -1621,8 +1621,8 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="18" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="18" style="1"/>
                   <foreground color="-1"/>
                   <text value="&lt;"/>
                 </properties>
@@ -1634,7 +1634,7 @@
               <card name="Card5"/>
             </constraints>
             <properties/>
-            <border type="bevel-lowered"/>
+            <border type="none"/>
             <children>
               <scrollpane id="69342" binding="scrollPane2">
                 <constraints>
@@ -1647,7 +1647,7 @@
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints/>
                     <properties>
-                      <background color="-2690825"/>
+                      <background color="-722695"/>
                       <visible value="true"/>
                     </properties>
                     <border type="none"/>
@@ -1659,7 +1659,7 @@
                           </grid>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                       </component>
                       <component id="410e2" class="javax.swing.JTable" binding="adminContractTable">
@@ -1669,7 +1669,7 @@
                           </grid>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                           <visible value="false"/>
                         </properties>
                       </component>
@@ -1679,7 +1679,7 @@
                           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                         </constraints>
                         <properties>
-                          <background color="-2690825"/>
+                          <background color="-722695"/>
                         </properties>
                         <border type="none"/>
                         <children>
@@ -1688,8 +1688,8 @@
                               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
-                              <font name="Fira Code" size="14" style="1"/>
+                              <background color="-15762301"/>
+                              <font size="14" style="1"/>
                               <foreground color="-1"/>
                               <text value="See Vehicles&#10;"/>
                             </properties>
@@ -1717,7 +1717,7 @@
                               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                             </constraints>
                             <properties>
-                              <background color="-11758696"/>
+                              <background color="-15762301"/>
                               <foreground color="-1"/>
                               <text value="Iade"/>
                             </properties>
@@ -1739,16 +1739,16 @@
                   <card name="Card2"/>
                 </constraints>
                 <properties>
-                  <background color="-2690825"/>
+                  <background color="-722695"/>
                 </properties>
-                <border type="bevel-lowered"/>
+                <border type="none"/>
                 <children>
                   <component id="f2ac6" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="0" column="0" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <font name="DialogInput" size="36" style="1"/>
+                      <font size="36" style="1"/>
                       <foreground color="-16777216"/>
                       <text value="RENTAL CONTRACT"/>
                     </properties>
@@ -1898,7 +1898,7 @@
                       </grid>
                     </constraints>
                     <properties>
-                      <background color="-2690825"/>
+                      <background color="-722695"/>
                       <foreground color="-16777216"/>
                       <text value="&#9;&#9;&#9;KİRALAMA SÖZLEŞMESİ&#10;1- Araç, teslim alındığı durumda ve belirtilen&#10;   iade tarihinde geri teslim edilir.&#10;2- Ücret = günlük fiyat x gün sayısı; kasko +&#10;   sigorta seçilirse 20$ eklenir.&#10;3- Trafik cezaları ve sigorta dışı hasarlar&#10;   kiracıya aittir.&#10;4- Geç iadede her gün için günlük ücret alınır."/>
                     </properties>
@@ -1955,17 +1955,17 @@
               <card name="Card2"/>
             </constraints>
             <properties>
-              <background color="-2690825"/>
+              <background color="-722695"/>
               <preferredSize width="450" height="385"/>
             </properties>
-            <border type="bevel-lowered"/>
+            <border type="none"/>
             <children>
               <component id="5b335" class="javax.swing.JLabel">
                 <constraints>
                   <grid row="6" column="1" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <text value="E-Mail"/>
                 </properties>
@@ -1975,7 +1975,7 @@
                   <grid row="8" column="1" row-span="1" col-span="7" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <text value="Password"/>
                 </properties>
@@ -1986,7 +1986,7 @@
                 </constraints>
                 <properties>
                   <enabled value="true"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <text value="Phone Number"/>
                 </properties>
@@ -1996,7 +1996,7 @@
                   <grid row="2" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <text value="Surname"/>
                 </properties>
@@ -2016,7 +2016,7 @@
                 </constraints>
                 <properties>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <tabSize value="5"/>
                 </properties>
               </component>
@@ -2028,7 +2028,7 @@
                 </constraints>
                 <properties>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <tabSize value="5"/>
                 </properties>
               </component>
@@ -2040,7 +2040,7 @@
                 </constraints>
                 <properties>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                 </properties>
               </component>
               <component id="e3331" class="javax.swing.JTextArea" binding="emailArea">
@@ -2051,7 +2051,7 @@
                 </constraints>
                 <properties>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                 </properties>
               </component>
               <component id="f05f" class="javax.swing.JTextArea" binding="passwordArea">
@@ -2062,7 +2062,7 @@
                 </constraints>
                 <properties>
                   <editable value="false"/>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                 </properties>
               </component>
               <component id="18f04" class="javax.swing.JButton" binding="signOutButton" default-binding="true">
@@ -2070,8 +2070,8 @@
                   <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <text value="Sign out"/>
                 </properties>
               </component>
@@ -2095,9 +2095,9 @@
                   <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-1767936"/>
+                  <background color="-2734779"/>
                   <enabled value="true"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <hideActionText value="false"/>
                   <text value="DELETE"/>
                 </properties>
@@ -2107,8 +2107,8 @@
                   <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <text value="EDIT"/>
                 </properties>
               </component>
@@ -2117,8 +2117,8 @@
                   <grid row="12" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <text value="UPDATE"/>
                   <visible value="false"/>
                 </properties>
@@ -2128,7 +2128,7 @@
                   <grid row="10" column="1" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-16777216"/>
                   <text value="Admin Key"/>
                 </properties>
@@ -2140,7 +2140,7 @@
                   </grid>
                 </constraints>
                 <properties>
-                  <font name="DialogInput" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <opaque value="true"/>
                   <tabSize value="5"/>
                 </properties>
@@ -2150,8 +2150,8 @@
                   <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <text value="Admin Login"/>
                 </properties>
               </component>
@@ -2168,7 +2168,7 @@
               <card name="Card3"/>
             </constraints>
             <properties>
-              <background color="-2690825"/>
+              <background color="-722695"/>
             </properties>
             <border type="none"/>
             <children>
@@ -2291,7 +2291,7 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-9605006"/>
+          <background color="-15584197"/>
           <visible value="true"/>
         </properties>
         <border type="none"/>
@@ -2302,7 +2302,7 @@
               <card name="Card1"/>
             </constraints>
             <properties>
-              <background color="-1773569"/>
+              <background color="-1"/>
               <enabled value="true"/>
             </properties>
             <border type="none"/>
@@ -2312,9 +2312,9 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
+                  <background color="-15762301"/>
                   <enabled value="true"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <font size="14" style="1"/>
                   <foreground color="-1"/>
                   <text value="Menu"/>
                   <visible value="true"/>
@@ -2328,7 +2328,7 @@
               <card name="Card2"/>
             </constraints>
             <properties>
-              <background color="-1773569"/>
+              <background color="-1"/>
             </properties>
             <border type="none"/>
             <children>
@@ -2337,8 +2337,8 @@
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
-                  <background color="-11758696"/>
-                  <font name="Fira Code" size="14" style="1"/>
+                  <background color="-15762301"/>
+                  <font size="14" style="1"/>
                   <foreground color="-1"/>
                   <text value="Menu"/>
                   <visible value="true"/>
@@ -2364,7 +2364,7 @@
           <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-6577492"/>
+          <background color="-1905427"/>
           <visible value="false"/>
         </properties>
         <border type="none"/>
@@ -2374,8 +2374,8 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-6577492"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-1905427"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="Car"/>
             </properties>
@@ -2385,8 +2385,8 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-6577492"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-1905427"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <selected value="false"/>
               <text value="Motorcycle"/>
@@ -2397,8 +2397,8 @@
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <background color="-6577492"/>
-              <font name="Fira Code" size="14" style="1"/>
+              <background color="-1905427"/>
+              <font size="14" style="1"/>
               <foreground color="-1"/>
               <text value="SUV"/>
             </properties>

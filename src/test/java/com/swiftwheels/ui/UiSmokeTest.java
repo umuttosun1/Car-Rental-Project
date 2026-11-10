@@ -50,9 +50,9 @@ class UiSmokeTest {
             MainAppPanel app = new MainAppPanel(2, false); // demo@swiftwheels.com
 
             ((JButton) field(app, "vehicleButton")).doClick();
-            assertEquals(4, ((JPanel) field(app, "carPanel")).getComponentCount(), "4 demo cars");
-            assertEquals(3, ((JPanel) field(app, "suvPanel")).getComponentCount(), "3 demo SUVs");
-            assertEquals(3, ((JPanel) field(app, "motorcyclePanel")).getComponentCount(), "3 demo motorcycles");
+            assertEquals(4, cardCount(field(app, "carPanel")), "4 demo cars");
+            assertEquals(3, cardCount(field(app, "suvPanel")), "3 demo SUVs");
+            assertEquals(3, cardCount(field(app, "motorcyclePanel")), "3 demo motorcycles");
 
             ((JButton) field(app, "accountButton")).doClick();
             assertEquals("demo@swiftwheels.com", ((JTextArea) field(app, "emailArea")).getText());
@@ -75,6 +75,13 @@ class UiSmokeTest {
             assertFalse(((JButton) field(app, "addVehicle1Button")).isVisible(), "admin mode starts OFF");
             return null;
         });
+    }
+
+    /** Cards live in a grid panel that is the only child of the list panel. */
+    private static int cardCount(Object listPanel) {
+        JPanel list = (JPanel) listPanel;
+        assertEquals(1, list.getComponentCount());
+        return ((JPanel) list.getComponent(0)).getComponentCount();
     }
 
     private static Object field(Object target, String name) throws ReflectiveOperationException {
