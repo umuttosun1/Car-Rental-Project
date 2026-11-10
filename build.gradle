@@ -1,0 +1,131 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'com.swiftwheels'
+version = '1.1.0'
+
+// IntelliJ GUI Designer (.form) support outside of IntelliJ: the forms are compiled into the
+// classes by JetBrains' "instrumentIdeaExtensions" Ant task right after javac.
+def intellijFormsVersion = '251.29188.80'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://www.jetbrains.com/intellij-repository/releases' }
+    maven { url = 'https://cache-redirector.jetbrains.com/intellij-dependencies' }
+}
+
+configurations {
+    formsCompiler
+}
+
+dependencies {
+    implementation 'org.postgresql:postgresql:42.7.4'
+    implementation "com.jetbrains.intellij.java:java-gui-forms-rt:${intellijFormsVersion}"
+    formsCompiler "com.jetbrains.intellij.java:java-compiler-ant-tasks:${intellijFormsVersion}"
+
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+tasks.named('test', Test) {
+    useJUnitPlatform()
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        exceptionFormat = 'full'
+    }
+}
+
+application {
+    mainClass = 'com.swiftwheels.Main'
+    applicationName = 'SwiftWheels'
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 17
+}
+
+tasks.named('compileJava', JavaCompile) {
+    def formSources = sourceSets.main.java.srcDirs
+    inputs.files(fileTree(dir: 'src/main/java', include: '**/*.form')).withPropertyName('forms')
+    doLast {
+        ant.taskdef(name: 'instrumentIdeaExtensions',
+                classname: 'com.intellij.ant.InstrumentIdeaExtensions',
+                classpath: configurations.formsCompiler.asPath)
+        ant.instrumentIdeaExtensions(
+                destdir: destinationDirectory.get().asFile,
+                classpath: (classpath + files(destinationDirectory)).asPath,
+                includeantruntime: false,
+                instrumentNotNull: false) {
+            formSources.each { dir -> src(path: dir) }
+        }
+    }
+}
+
+// ---------------------------------------------------------------------------
+//  Windows .exe (self-contained, bundles its own Java runtime)
+//    gradlew packageExe  ->  build/jpackage/SwiftWheels/SwiftWheels.exe
+//    gradlew packageZip  ->  build/distributions/SwiftWheels-<version>-windows.zip
+// ---------------------------------------------------------------------------
+def jpackageOut = layout.buildDirectory.dir('jpackage')
+
+tasks.register('packageExe', Exec) {
+    group = 'distribution'
+    description = 'Builds a self-contained SwiftWheels.exe application image with jpackage.'
+    dependsOn 'installDist'
+
+    // jpackage ships with every JDK >= 14; use the one running Gradle
+    def isWindows = System.getProperty('os.name').toLowerCase(Locale.ROOT).contains('windows')
+    def jpackageTool = new File(System.getProperty('java.home'), 'bin/jpackage' + (isWindows ? '.exe' : ''))
+    def libDir = layout.buildDirectory.dir('install/SwiftWheels/lib')
+
+    inputs.dir(libDir)
+    outputs.dir(jpackageOut)
+
+    doFirst {
+        if (!jpackageTool.exists()) {
+            throw new GradleException("jpackage not found at ${jpackageTool} - run Gradle with a full JDK 17+.")
+        }
+        delete jpackageOut
+    }
+    executable = jpackageTool.absolutePath
+    argumentProviders.add({
+        [
+                '--type', 'app-image',
+                '--name', 'SwiftWheels',
+                '--app-version', project.version.toString(),
+                '--vendor', 'SwiftWheels',
+                '--description', 'SwiftWheels car rental',
+                '--icon', file('packaging/SwiftWheels.ico').absolutePath,
+                '--input', libDir.get().asFile.absolutePath,
+                '--main-jar', jar.archiveFileName.get(),
+                '--main-class', application.mainClass.get(),
+                '--java-options', '-Dfile.encoding=UTF-8',
+                // only the JDK modules the app needs (found with `jdeps --print-module-deps`)
+                '--add-modules', 'java.base,java.desktop,java.management,java.naming,java.security.jgss,java.sql,jdk.crypto.ec,jdk.localedata',
+                '--jlink-options', '--strip-debug --no-man-pages --no-header-files --include-locales=en,tr',
+                '--dest', jpackageOut.get().asFile.absolutePath,
+        ]
+    } as CommandLineArgumentProvider)
+
+    doLast {
+        copy {
+            from 'db.properties.example'
+            into jpackageOut.get().dir('SwiftWheels')
+        }
+    }
+}
+
+tasks.register('packageZip', Zip) {
+    group = 'distribution'
+    description = 'Zips the .exe application image together with the database scripts.'
+    dependsOn 'packageExe'
+    archiveFileName = "SwiftWheels-${project.version}-windows.zip"
+    destinationDirectory = layout.buildDirectory.dir('distributions')
+    from(jpackageOut.map { it.dir('SwiftWheels') }) { into 'SwiftWheels' }
+    from('database') { into 'SwiftWheels/database'; include '*.sql'; exclude 'legacy-*' }
+    from('scripts/setup-database.ps1') { into 'SwiftWheels' }
+}
